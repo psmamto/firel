@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+--- 
+
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Wycieczki po Cyprze, wynajem aut i rowerów.">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Cypr</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+                <div class="logo">CyprNaTwojSposob</div>
+				<div class="nav-links">
+                    <a href="/" class:list={{ active: Astro.url.pathname === "/" }}>Strona główna</a>
+                    <a href="/wycieczki" class:list={{ active: Astro.url.pathname === "/wycieczki" }}>Wycieczki</a>
+                    <a href="/wynajem" class:list={{ active: Astro.url.pathname === "/wynajem" }}>Wynajem</a>
+                    <a href="/o-nas" class:list={{ active: Astro.url.pathname === "/o-nas" }}>O nas</a>
+                    <a href="/kontakt" class:list={{ active: Astro.url.pathname === "/kontakt" }}>Kontakt</a>
+                </div>
+			</nav>
+		</header>
+
+		<main>
+		    <slot />
+		</main>
+
+        <footer>
+            <p>&copy; {new Date().getFullYear()} CyprNaTwojSposob. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+	</body>
+</html>

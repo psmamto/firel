@@ -1,16 +1,60 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Strona główna">
+	<div class="hero">
+		<h1>Odkryj Cypr na nowo</h1>
+		<p>Niezapomniane wycieczki, najlepsze samochody i rowery.</p>
+		<a href="/wycieczki" class="cta-button">Zobacz nasze wycieczki</a>
+	</div>
+
+	<div class="section">
+		<h2 class="section-title">Polecane wycieczki</h2>
+		<div class="card-grid">
+			<Card 
+                title="Kyrenia i Famagusta"
+                imageUrl="https://images.unsplash.com/photo-1592996372297-5b6c229e0efb?q=80&w=2070&auto=format&fit=crop" 
+                text="Odkryj historię i kulturę północnego Cypru."
+                url="/wycieczki"
+            />
+            <Card 
+                title="Góry Troodos"
+                imageUrl="https://images.unsplash.com/photo-1572115312903-b7b5b7b6b1b5?q=80&w=1932&auto=format&fit=crop"
+                text="Malownicze krajobrazy i tradycyjne wioski."
+                url="/wycieczki"
+            />
+            <Card
+                title="Rejs statkiem"
+                imageUrl="https://images.unsplash.com/photo-1603934333934-9d5841d1d8a8?q=80&w=1974&auto=format&fit=crop"
+                text="Zrelaksuj się na pokładzie i podziwiaj wybrzeże."
+                url="/wycieczki"
+            />
+		</div>
+	</div>
+
+	<div class="section">
+		<h2 class="section-title">Wynajem pojazdów</h2>
+		<div class="card-grid">
+            <Card
+                title="Samochody"
+                imageUrl="https://images.unsplash.com/photo-1514316454348-720054cc3370?q=80&w=2070&auto=format&fit=crop"
+                text="Szeroki wybór nowoczesnych i komfortowych aut."
+                url="/wynajem"
+            />
+            <Card 
+                title="Rowery górskie"
+                imageUrl="https://images.unsplash.com/photo-1576620546256-d494103173a5?q=80&w=2070&auto=format&fit=crop"
+                text="Idealne na odkrywanie górskich szlaków."
+                url="/wynajem"
+            />
+            <Card
+                title="Skutery"
+                imageUrl="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2070&auto=format&fit=crop"
+                text="Szybki i wygodny sposób na poruszanie się po mieście."
+                url="/wynajem"
+            />
+		</div>
+	</div>
+</Layout>

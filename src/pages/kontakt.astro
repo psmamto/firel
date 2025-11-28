@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Kontakt">
+    <div class="section">
+        <h1 class="section-title">Skontaktuj się z nami</h1>
+        <div class="contact-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+            <div class="contact-form">
+                <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <input type="text" placeholder="Imię i nazwisko" required style="padding: 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
+                    <input type="email" placeholder="Adres e-mail" required style="padding: 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;">
+                    <textarea placeholder="Twoja wiadomość" rows="6" required style="padding: 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; resize: vertical;"></textarea>
+                    <button type="submit" class="cta-button" style="align-self: start;">Wyślij wiadomość</button>
+                </form>
+            </div>
+            <div class="contact-info" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+                <h3 style="font-size: 1.8rem; color: #0d47a1; margin-top: 0;">Dane kontaktowe</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>Adres:</strong><br>
+                    Apollo Street 123, 8041 Paphos, Cypr
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>Telefon:</strong><br>
+                    +357 12 345 678
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>E-mail:</strong><br>
+                    kontakt@cyprnatwojsposob.pl
+                </p>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    @media (max-width: 900px) {
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
