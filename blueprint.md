@@ -10,6 +10,7 @@ This project is a website for a travel agency specializing in tours, experiences
 *   **Language:** Polish
 *   **Framework:** Astro.js
 *   **Styling:** Bold, modern design with a professional color scheme, gradients, and drop shadows.
+*   **Images:** Local images are stored in the `public/images` directory for better performance and reliability.
 
 ### Pages
 *   **Home (`/`):** Hero section with a call-to-action, featured tours, car rentals, and bike rentals.
@@ -24,10 +25,5 @@ This project is a website for a travel agency specializing in tours, experiences
 
 ## Current Plan
 
-1.  **Update `blueprint.md`:** Reflect the new design goals.
-2.  **Redesign `Layout.astro`:** Introduce a more sophisticated layout.
-3.  **Enhance `global.css`:** Implement a modern stylesheet with a new color palette, fonts, and effects.
-4.  **Update the homepage (`index.astro`):** Add a hero section and featured content.
-5.  **Create a `Card.astro` component:** For reusable content blocks.
-6.  **Update content pages:** Use the new card component.
-7.  **Add Polish content:** Populate the pages with relevant text.
+1.  **Update Image Paths:** Modify all pages to use local images from the `public/images` directory instead of external Unsplash links.
+2.  **Commit and Push Changes:** Add all modified files to Git and push them to the GitHub repository.
